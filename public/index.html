@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja MQTT - E-commerce Automatizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 Loja MQTT</h1>
+            <p>E-commerce com Automação ESP32</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="produtos-section">
+            <h2>Nossos Produtos</h2>
+            <div id="produtos-grid" class="produtos-grid">
+                <!-- Produtos serão carregados dinamicamente -->
+            </div>
+        </section>
+
+        <section id="carrinho-section" class="hidden">
+            <h2>Seu Carrinho</h2>
+            <div id="carrinho-item" class="carrinho-item">
+                <!-- Item do carrinho será mostrado aqui -->
+            </div>
+            <button id="finalizar-btn" class="btn btn-primary">Finalizar Compra</button>
+        </section>
+
+        <section id="checkout-section" class="hidden">
+            <h2>Dados para Entrega</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">WhatsApp (com DDD):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+                <button type="submit" class="btn btn-success">Confirmar Pedido</button>
+                <button type="button" id="voltar-btn" class="btn btn-secondary">Voltar</button>
+            </form>
+        </section>
+
+        <section id="sucesso-section" class="hidden">
+            <div class="sucesso-container">
+                <h2>✅ Pedido Confirmado!</h2>
+                <div id="pedido-info">
+                    <!-- Informações do pedido serão mostradas aqui -->
+                </div>
+                <p>Seu produto está sendo preparado pelo nosso sistema automatizado!</p>
+                <button id="whatsapp-btn" class="btn btn-whatsapp">📱 Abrir WhatsApp</button>
+                <button id="novo-pedido-btn" class="btn btn-secondary">Fazer Novo Pedido</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Feira Técnica - Integração Desenvolvimento de Sistemas + Mecatrônica</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
